@@ -12,11 +12,18 @@
 
 # Body
 def most_frequent(s):
-    ...
-
+  letter_count = {}
+  s = s.lower()
+  lst_s = s.split()
+  s_nospace = "".join(lst_s)
+  s = s.strip()
+  for letter in s_nospace:
+    letter_count[letter] = 1 + letter_count.get(letter, 0)
+  print(sorted(letter_count, key=letter_count.__getitem__))
 
 ###############################################################################
 def main():   # DO NOT CHANGE BELOW
+        
     print("Example 1:")
     most_frequent("abcdefghijklmnopqrstuvwxyz")
     print("\nExample 2:")

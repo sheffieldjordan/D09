@@ -13,7 +13,11 @@
 # Imports
 
 # Body
-
+def sumall(*values):
+	total = 0
+	for item in values:
+		total += int(item)
+	return total
 
 ##############################################################################
 def main():   # DO NOT CHANGE BELOW
